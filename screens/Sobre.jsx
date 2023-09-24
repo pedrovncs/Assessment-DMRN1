@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import InfoData from '../assets/info.json';
 
 export default function AppInfoScreen() {
-  const deviceId = Device.deviceId;
   const deviceName = Device.deviceName;
   const deviceBrand = Device.brand;
   const deviceOS = Device.osName;
@@ -23,7 +22,6 @@ export default function AppInfoScreen() {
       <View style={styles.card}>
         <Text style={styles.title}>Informações do Dispositivo</Text>
         <Text>Nome do Dispositivo: {deviceName}</Text>
-        <Text>ID do Dispositivo: {deviceId}</Text>
         <Text>Marca do Dispositivo: {deviceBrand}</Text>
         <Text>Sistema Operacional: {deviceOS}</Text>
       </View>
@@ -39,10 +37,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 16,
     padding: 16,
   },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 16,
   },
